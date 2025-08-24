@@ -68,6 +68,11 @@ public class PlayerController : MonoBehaviour
         //자신의 게임 오브젝트를 비활성화
         gameObject.SetActive(false);    //SetVctive = 오브젝트 활성화 / 비활성화
 
+        //씬에 존재하는 GameManager 타입의 오브젝트를 찾아서 가져오기
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        //가져온 Gamemanager 오브젝트의 EndGame() 메서드 실행
+        gameManager.EndGame();
+
     }
 }
 
